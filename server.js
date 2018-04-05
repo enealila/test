@@ -59,7 +59,13 @@ app.get('/home',(req,res)=>{
         welcomeMessage:'Welcome to my homepage!'
     });
 }); 
-
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        pageTitle: 'Projects Page',
+        currentYear: new Date().getFullYear(),
+        welcomeMessage:'Welcome to my homepage!'
+    });
+}); 
 
 
 app.listen(port,()=>{
